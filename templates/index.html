@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block head %}
+ <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+        }
+
+        #main {
+            height: 94%;
+        }
+
+        #cover {
+            height: 100%;
+        }
+
+        #title {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+            margin: .67em 0;
+            text-shadow: 0 1px 3px rgba(0,0,0,.5);
+        }
+        #title_body{
+            font-weight: 300;
+            font-size: 21px;
+            line-height: 1.4;
+            letter-spacing: 3px;
+        }
+        #sunyehao{
+            color: aliceblue;
+        }
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+        .btn-lg {
+            margin-top: 20px;
+  padding: 8px 18px;
+  font-weight: bold;
+}
+
+    </style>
+{% endblock head %}
+    {% block body %}
+    <div class="container-fluid" id="main">
+    <div class="container-fluid align-items-center" id="cover">
+        <div class="row align-items-center " style="height: 100%">
+            <div class="col-md-6  offset-md-3 col-sm-8 offset-sm-2">
+                <div id="title" class="center-block text-center"><h1>一个人的朋友圈</h1></div>
+                <div id="title_body" class=" center-block text-center"><h5>页面正在装修中，预计2018年10月8号上线</h5></div>
+                <div class=" center-block text-center  "><p><a href="{% url 'log:log' %}" class="btn btn-default btn-lg">comming</a></p></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    {% endblock body %}
+{% block footer %}
+        <div id="footer " class="container-fluid align-items-end">
+
+        <div class=" center-block text-center">
+            <div class="container-fluid ">
+                <p> &copy; Copyright 2018 by <a id="sunyehao" href="{% url 'index' %}" >sun yehoo</a>.</p>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

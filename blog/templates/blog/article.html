@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% include 'log/navbar.html' %}
+    <hr>
+    <div class="container">
+{{ article.title }}
+    <hr>
+    {{ article.created_time }}
+    <hr>
+    {{ article.body }}
+    </div>
+{% endblock %}

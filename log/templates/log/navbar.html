@@ -1,0 +1,18 @@
+
+    <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light  bg-light">
+  <a class="navbar-brand" href="#">导航栏</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link " href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link " href="{% url 'log:log' %}">日志</a>
+      <a class="nav-item nav-link" href="{% url 'log:comment' %}">留言板</a>
+        <a class="nav-item nav-link" href="{% url 'blog:index' %}">文章</a>
+      <a class="nav-item nav-link " href="/admin">关于</a>
+    </div>
+  </div>
+</nav>
+    </div>
