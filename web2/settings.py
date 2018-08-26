@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o4dimy#o-@*@crg%fvuwe7+k7m6s4_^mg3-2h$7*kb#f_p3(2('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -52,11 +52,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'web2.urls'
-
+# os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': []
         ,
         'APP_DIRS': True,
         'OPTIONS': {
