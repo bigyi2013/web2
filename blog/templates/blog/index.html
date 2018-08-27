@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 {% block body %}
     {% include 'log/navbar.html' %}
+    <div class="container-fluid"></div>
+    <div class="row"></div>
+    <div class="col-md-8">
 {% for article in article_list %}
       <a class="h3" href="{% url 'blog:article' article.id %}">{{ article.title }}</a>
        <p class="h4">{{ article.excerpt }}</p>
-{% endfor %}
 
+    {% empty %}
+    <div class="no-post">暂时还没有发布的文章！</div>
+{% endfor %}
+</div>
 {% endblock %}
