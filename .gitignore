@@ -107,3 +107,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+fabfile.py
