@@ -2,8 +2,8 @@
 {% block body %}
     {% include 'log/navbar.html' %}
 {% for article in article_list %}
-        <li><a href="{% url 'blog:article' article.id %}">{{ article.title }}</a></li>
-        <h3>{{ article.excerpt }}</h3>
+      <a class="h3" href="{% url 'blog:article' article.id %}">{{ article.title }}</a>
+       <p class="h4">{{ article.excerpt }}</p>
 {% endfor %}
 
 {% endblock %}

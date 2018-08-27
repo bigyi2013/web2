@@ -5,3 +5,10 @@
 8000端口被占用。sudo fuser -k 8000/tcp
 python manage.py collectstatic 命令收集静态文件到 static 目录下
 IP:120.79.221.32
+
+启动 Supervisord：
+
+supervisord -c /etc/supervisord.conf
+关闭 supervisor：
+
+supervisorctl shutdown
