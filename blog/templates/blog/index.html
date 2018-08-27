@@ -3,7 +3,7 @@
     {% include 'log/navbar.html' %}
     <div class="container-fluid"></div>
     <div class="row"></div>
-    <div class="col-md-6 offset-md-2 col-sm-10 offset-sm-1 article-list ">
+    <div class="col-md-6 offset-md-1 col-sm-10 offset-sm-1 article-list ">
         {% for article in article_list %}
             <p class="text-justify"><a class="h3" href="{% url 'blog:article' article.id %}">{{ article.title }}</a></p>
             <p class="h4 text-justify">{{ article.excerpt }}</p>
