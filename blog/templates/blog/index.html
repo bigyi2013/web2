@@ -6,9 +6,9 @@
     <div class="col-md-7 offset-md-1 col-sm-10 offset-sm-1 article-list mt-4">
         {% for article in article_list %}
             <div class="article  border-bottom mt-3 ">
-            <p class=" text-justify  align-top m-0 p-0"><a class="h5 " href="{% url 'blog:article' article.id %}">{{ article.title }}</a></p>
+            <p class=" text-justify  align-top m-0 p-0"><a class="h5 " href="{% url 'blog:article_detail' article.id %}">{{ article.title }}</a></p>
             <p class="font-weight-light  m-0 p-0">{{ article.created_time|date:'m-d' }}</p>
-            <p class=" h6 text-justify mt-3">{{ article.excerpt }}</p>
+            <p class=" h6 text-justify mt-3">{{ article.excerpt|safe }}</p>
             </div>
         {% empty %}
             <div class="no-post">暂时还没有发布的文章！</div>

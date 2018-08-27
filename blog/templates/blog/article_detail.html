@@ -7,6 +7,6 @@
     <hr>
     {{ article.created_time }}
     <hr>
-    {{ article.body }}
+    {{ article.body|safe }}
     </div>
 {% endblock %}
