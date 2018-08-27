@@ -2,15 +2,17 @@
 {% block body %}
     {% include 'log/navbar.html' %}
     <div class="container-fluid"></div>
-    <div class="row"></div>
-    <div class="col-md-6 offset-md-1 col-sm-10 offset-sm-1 article-list ">
+    <div class="row ">
+    <div class="col-md-7 offset-md-1 col-sm-10 offset-sm-1 article-list mt-4">
         {% for article in article_list %}
-            <p class="text-justify"><a class="h3" href="{% url 'blog:article' article.id %}">{{ article.title }}</a></p>
-            <p class="h4 text-justify">{{ article.excerpt }}</p>
-            <hr>
+            <div class="article  border-bottom mt-3">
+            <p class="text-justify"><a class="h5" href="{% url 'blog:article' article.id %}">{{ article.title }}</a></p><p class="font-weight-light">{{ article.created_time|date:'y-m-d' }}</p>
+            <p class=" h6 text-justify">{{ article.excerpt }}</p>
+            </div>
         {% empty %}
             <div class="no-post">暂时还没有发布的文章！</div>
         {% endfor %}
     </div>
     <div class="col-md-4 d-none d-md-block d-lg-block"></div>
+    </div>
 {% endblock %}
