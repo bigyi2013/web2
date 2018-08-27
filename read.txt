@@ -3,3 +3,4 @@
 运行 python manage.py migrate 来应用数据库迁移。
 
 8000端口被占用。sudo fuser -k 8000/tcp
+python manage.py collectstatic 命令收集静态文件到 static 目录下
