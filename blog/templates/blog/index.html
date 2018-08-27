@@ -3,13 +3,15 @@
     {% include 'log/navbar.html' %}
     <div class="container-fluid"></div>
     <div class="row"></div>
-    <div class="col-md-8">
-{% for article in article_list %}
-      <a class="h3" href="{% url 'blog:article' article.id %}">{{ article.title }}</a>
-       <p class="h4">{{ article.excerpt }}</p>
+    <div class="col-md-8 col-sm-10 col-sm-offset-1 article-list">
 
-    {% empty %}
-    <div class="no-post">暂时还没有发布的文章！</div>
-{% endfor %}
-</div>
+        {% for article in article_list %}
+            <p class="text-justify"><a class="h3" href="{% url 'blog:article' article.id %}">{{ article.title }}</a></p>
+            <p class="h4 text-justify">{{ article.excerpt }}</p>
+            <hr>
+        {% empty %}
+            <div class="no-post">暂时还没有发布的文章！</div>
+        {% endfor %}
+    </div>
+    <div class="col-md-4 d-none d-md-block d-lg-block"></div>
 {% endblock %}
