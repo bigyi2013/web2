@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from .models import Article
+import markdown
 # Create your views here.
 def index(request):
     articles=Article.objects.order_by('-created_time')
@@ -7,10 +8,10 @@ def index(request):
     return render(request,'blog/index.html',context)
 def article_detail(request,article_id):
     article=get_object_or_404(Article,pk=article_id)
-    # article.body=markdown.markdown(article.body,
-    #                                extensions=[
-    #                                    'markdown.extensions.extra',
-    #                                    'markdown.extensions.codehilite',
-    #                                    'markdown.extensions.toc',
-    #                                ])
+    article.body=markdown.markdown(article.body,
+                                   extensions=[
+                                       'markdown.extensions.extra',
+                                       'markdown.extensions.codehilite',
+                                       'markdown.extensions.toc',
+                                   ])
     return render(request, 'blog/article_detail.html', {'article':article})
