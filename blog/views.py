@@ -1,6 +1,5 @@
 from django.shortcuts import get_object_or_404, render
 from .models import Article
-import markdown
 # Create your views here.
 def index(request):
     articles=Article.objects.order_by('-created_time')
