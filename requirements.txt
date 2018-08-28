@@ -1,7 +1,6 @@
 Django==2.1
 pytz==2018.5
 django-ckeditor
-django
 django-js-asset
 Pillow
 selenium
