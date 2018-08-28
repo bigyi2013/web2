@@ -1,0 +1,4 @@
+/*不显示navbar*/
+#navbar{
+    display: none;
+}

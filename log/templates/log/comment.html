@@ -1,35 +1,45 @@
 {% extends 'base.html' %}
 {% block body %}
     {% include 'log/navbar.html' %}
-    <div class="container" style="margin-top: 50px ;margin-bottom: 50px"><h5>{{ comment_article.body|safe }}</h5></div>
-    <div class="container">
-        <p>留言们：</p>
-        {% for comment in comment_list %}
-            {{ comment.text }}
-            <blockquote class="blockquote text-right">
-                <footer class="blockquote-footer">{{ comment.name }} </footer>
-            </blockquote>
-            <hr>
-        {% endfor %}
-    </div>
-    <div class="container">
-        <form action="{% url 'log:comment' %}" method="post" class="comment-form">
-            {% csrf_token %}
-            <div class="row">
-                <div class="col-md-4">
-                    <label for="{{ form.name.id_for_label }}">名字：</label>
-                    {{ form.name }}
-                    {{ form.name.errors }}
-                </div>
 
-                <div class="col-md-12">
-                    <label for="{{ form.text.id_for_label }}">评论：</label>
-                    {{ form.text }}
-                    {{ form.text.errors }}
-                    <button type="submit" class="comment-btn">发表</button>
+    <div class="container-fluid row justify-content-center">
+        <div class="container mt-4 mb-5 col-6"><h5>{{ comment_article.body|safe }}</h5></div>
+        <div class="w-100"></div>
+        <div class="col-6">
+            <p>留言们：</p>
+            {% for comment in comment_list %}
+                <div class="border-bottom pt-1 pb-1">
+                    {{ comment.text }}
+                    <blockquote class="blockquote text-right">
+                        <footer class="blockquote-footer">{{ comment.name }} </footer>
+                    </blockquote>
                 </div>
-            </div>    <!-- row -->
-        </form>
+            {% endfor %}
+        </div>
+        <div class="w-100"></div>
+        <div class="col-6" id="form">
+            <form action="{% url 'log:comment' %}" method="post" class="comment-form">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-4">
+                        <label for="{{ form.name.id_for_label }}">名字：</label>
+                        {{ form.name }}
+                        {{ form.name.errors }}
+                    </div>
+
+                    <div class="col-12">
+                        <label for="{{ form.text.id_for_label }}">评论：</label>
+                        {{ form.text }}
+                        {{ form.text.errors }}
+                    </div>
+
+                    <div class="col-2">
+                        <button type="submit" class="comment-btn ml-4">发表</button>
+                    </div>
+                </div>    <!-- row -->
+            </form>
+        </div>
     </div>
+
 {% endblock %}
 

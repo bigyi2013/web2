@@ -1,15 +1,22 @@
+
 {% extends 'base.html' %}
+{% block head %}
+{%  load staticfiles %}
+    <link rel="stylesheet" href="{% static 'blog/article_detail.css' %}">
+
+{% endblock %}
+
 {% block title %}
-{{ article.title }}
+    {{ article.title }}
 {% endblock %}
 {% block body %}
     {% include 'log/navbar.html' %}
-    <hr>
-    <div class="container">
-{{ article.title }}
-    <hr>
-    {{ article.created_time }}
-    <hr>
-    {{ article.body|safe }}
+    <div class="row justify-content-center mt-5 pt-3">
+        <div id="article_detail" class="col-md-8 ">
+
+               <div class="h2 text-center">{{ article.title }}</div>
+                <div class="text-right font-weight-light">{{ article.created_time }}</div>
+                <div class="container-fluid">{{ article.body|safe }}</div>
+        </div>
     </div>
 {% endblock %}
