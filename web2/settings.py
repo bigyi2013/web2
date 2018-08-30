@@ -25,7 +25,7 @@ SECRET_KEY = 'o4dimy#o-@*@crg%fvuwe7+k7m6s4_^mg3-2h$7*kb#f_p3(2('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','.sunyehao.com']
+ALLOWED_HOSTS = ['127.0.0.1','.sunyehao.com']
 
 
 # Application definition
