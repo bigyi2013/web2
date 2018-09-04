@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'log.apps.LogConfig',
-    'ckeditor',
-    'ckeditor_uploader'
+     'mdeditor',
+     'editormd',
 ]
 
 MIDDLEWARE = [
@@ -125,17 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 
-#下面是ckeditor的配置文件
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-CKEDITOR_UPLOAD_PATH = "upload/"  # 注意只有右侧带有“/”
-CKEDITOR_IMAGE_BACKEND = "pillow"
-# CKEDITOR_CONFIGS = {
-#     'default': {  # 添加默认配置
-#     },
-#     'mycfg': {  # 添加自定义配置
-#         'skin': 'moono',  # 设置皮肤
-#         'toolbar': 'full',  # 设置工具栏加载全部功能
-#         'width': '100%',  # 设置宽度
-#     },
-# }
+#下面是mdeditor的配置文件
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')  #uploads必须存在，且在项目目录下
+MEDIA_URL = '/media/'   #你上传的文件和图片会默认存在/uploads/editor下
+#下面是mdeditor的配置文件
