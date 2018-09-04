@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'log.apps.LogConfig',
      'mdeditor',
-     'editormd',
 ]
 
 MIDDLEWARE = [
