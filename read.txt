@@ -12,3 +12,9 @@ supervisord -c /etc/supervisord.conf
 关闭 supervisor：
 
 supervisorctl shutdown
+
+
+
+conda:
+
+sources activate env_name
