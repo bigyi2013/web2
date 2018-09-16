@@ -1,6 +1,6 @@
 from django import forms
-from .models import Comment
-class CommentForm(forms.ModelForm):
+from .models import Liuyan
+class LiuyanForm(forms.ModelForm):
     class Meta:
-        model = Comment
+        model = Liuyan
         fields = ['name', 'text']

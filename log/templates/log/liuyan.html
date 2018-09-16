@@ -3,11 +3,9 @@
     {% include 'log/navbar.html' %}
 
     <div class="container-fluid row justify-content-center">
-        <div class="container mt-4 mb-5 col-md-8 col-sm-10"><h5>{{ comment_article.body|safe }}</h5></div>
-        <div class="w-100"></div>
         <div class="col-md-8 col-sm-10">
             <p>留言们：</p>
-            {% for comment in comment_list %}
+            {% for comment in liuyan_list %}
                 <div class="border-bottom pt-1 pb-1">
                     {{ comment.text }}
                     <blockquote class="blockquote text-right">
@@ -18,7 +16,7 @@
         </div>
         <div class="w-100"></div>
         <div class="col-md-8 col-sm-10" id="form">
-            <form action="{% url 'log:comment' %}" method="post" class="comment-form">
+            <form action="{% url 'log:liuyan' %}" method="post" class="comment-form">
                 {% csrf_token %}
                 <div class="row">
                     <div class="col-4">

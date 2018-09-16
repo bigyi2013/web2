@@ -17,4 +17,4 @@ supervisorctl shutdown
 
 conda:
 
-sources activate env_name
+sources activate web2
