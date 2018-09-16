@@ -1,18 +1,26 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-10 " id="navbar">
+            <nav class="navbar  justify-content-between  navbar-expand-sm navbar-light  text-dark bg-white">
+                <div class="col-auto">
+                    <a class="navbar-brand" href="#">bigyi图标</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ">
+                        <a class="nav-item nav-link " href="{% url 'index' %}">欢迎页面<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="{% url 'blog:index' %}">网站首页</a>
+                        <a class="nav-item nav-link " href="{% url 'log:log' %}">更新日志</a>
+                        <a class="nav-item nav-link" href="{% url 'log:comment' %}">给我留言</a>
 
-    <div class="container-fluid " id="navbar">
-        <nav class="navbar navbar-expand-lg navbar-light  bg-light">
-  <a class="navbar-brand" href="#">导航栏</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link " href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link " href="{% url 'log:log' %}">日志</a>
-      <a class="nav-item nav-link" href="{% url 'log:comment' %}">留言板</a>
-        <a class="nav-item nav-link" href="{% url 'blog:index' %}">文章</a>
-      <a class="nav-item nav-link " href="/admin">关于</a>
+                        <a class="nav-item nav-link " href="/admin">关于</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
-  </div>
-</nav>
-    </div>
+</div>
