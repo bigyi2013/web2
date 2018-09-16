@@ -6,7 +6,7 @@ from .models import Comment
 from blog.models import Article
 from .forms import LiuyanForm
 def log_page(request):
-    log_list=log.objects.order_by('created_time')
+    log_list=log.objects.order_by('-created_time')
     context = {'log_lists': log_list}
     return  render(request,'log/log_page.html',context)
 def about(request):
