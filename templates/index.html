@@ -52,6 +52,9 @@
 
     </style>
 {% endblock head %}
+{% block navbar %}
+
+{% endblock %}
     {% block body %}
     <div class="container-fluid" id="main">
     <div class="container-fluid align-items-center" id="cover">
@@ -68,7 +71,6 @@
     {% endblock body %}
 {% block footer %}
         <div id="footer " class="container-fluid align-items-end">
-
         <div class=" center-block text-center">
             <div class="container-fluid ">
                 <p> &copy; Copyright 2018 by <a id="sunyehao" href="{% url 'index' %}" >sun yehoo</a>.</p>

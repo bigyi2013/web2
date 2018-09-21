@@ -1,19 +1,30 @@
 {% extends 'base.html' %}
 {% block body %}
-    {% include 'log/navbar.html' %}
-    <div class="container-fluid"></div>
-    <div class="row ">
-    <div class="col-md-7 offset-md-1 col-sm-10 offset-sm-1 article-list mt-4">
-        {% for article in article_list %}
-            <div class="article  border-bottom mt-3 ">
-            <p class=" text-justify  align-top m-0 p-0"><a class="h5 " href="{% url 'blog:article_detail' article.id %}">{{ article.title }}</a></p>
-            <p class="font-weight-light  m-0 p-0">{{ article.created_time|date:'m-d' }}</p>
-            <p class=" h6 text-justify mt-3">{{ article.excerpt|safe }}</p>
+    <div class="container-fluid row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-10 ">
+             {% for article in article_list %}
+            <div class="card">
+{#                <img class="card-img-top" src="..." alt="card image">#}
+                <div class="card-body">
+                    <div class="card-title"><h5>{{ article.title }}</h5></div>
+                    <div class="card-text">{{ article.excerpt|safe }}</div>
+                    <a    href="{% url 'blog:article_detail' article.id %}" class="btn btn-primary">阅读全文</a>
+                </div>
             </div>
-        {% empty %}
-            <div class="no-post">暂时还没有发布的文章！</div>
-        {% endfor %}
-    </div>
-    <div class="col-md-4 d-none d-md-block d-lg-block"></div>
+  {% empty %}
+                   <div class="no-post">暂时还没有发布的文章！</div>
+ {% endfor %}
+
+
+
+                <div class="article  border-bottom mt-3 ">
+
+                    <p class="font-weight-light  m-0 p-0">{{ article.created_time|date:'m-d' }}</p>
+                    <p class=" h6 text-justify mt-3"></p>
+                </div>
+
+
+
+        </div>
     </div>
 {% endblock %}

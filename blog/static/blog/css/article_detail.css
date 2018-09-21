@@ -2,3 +2,7 @@
 #navbar{
     display: none;
 }
+.img_s{
+    max-width: 60%;
+    height: auto;
+}
